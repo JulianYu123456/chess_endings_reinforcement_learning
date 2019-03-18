@@ -1,5 +1,10 @@
 import chess
 
+def get_board(state):
+    board = chess.Board()
+    board.set_fen(state)
+    return board
+
 def get_two_bishops_start():
     board = chess.Board()
     board.clear()
