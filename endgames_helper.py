@@ -5,6 +5,16 @@ def get_board(state):
     board.set_fen(state)
     return board
 
+def get_knight_bishop_start():
+    board = chess.Board()
+    board.clear()
+    board.set_piece_at(0, chess.Piece(chess.BISHOP, True))
+    board.set_piece_at(1, chess.Piece(chess.KNIGHT, True))
+    board.set_piece_at(2, chess.Piece(chess.KING, True))
+    board.set_piece_at(56, chess.Piece(chess.KING, False))
+    board.turn = True
+    return board
+
 def get_two_bishops_start():
     board = chess.Board()
     board.clear()
